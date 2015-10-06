@@ -42,3 +42,20 @@
 | 50 5 5 5 |       |
 +----------+-------+
 '''
+
+
+N=int(input())
+A=list(map(int, input().split()))
+moneti=0
+sdacha=0
+
+for i in range(N):
+    if A[i]==5:
+        moneti+=1
+for i in range(N):
+    sdacha=(A[i]-5)//5
+    moneti-=sdacha
+if moneti<0:
+    print(-moneti)
+else:
+    print(0)
